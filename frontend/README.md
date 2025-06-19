@@ -16,7 +16,7 @@
    ```bash
    npm run dev
    ```
-   Abre Electron y React con hot reload.
+   Abre Electron y React con hot reload. Accede al panel de curador en `http://localhost:5173/curador`.
 
 3. Build para producción:
    ```bash
