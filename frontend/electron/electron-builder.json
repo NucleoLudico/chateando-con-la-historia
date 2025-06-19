@@ -1,0 +1,10 @@
+{
+  "appId": "com.conversaciones.historia",
+  "files": [
+    "dist/**/*",
+    "electron/**/*"
+  ],
+  "directories": {
+    "buildResources": "public"
+  }
+}

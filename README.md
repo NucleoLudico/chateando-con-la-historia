@@ -2,9 +2,8 @@
 
 Plataforma educativa para diálogo crítico con personajes históricos y científicos, potenciando el pensamiento crítico en escuelas.
 
-Este repositorio contiene el código del backend en Node.js y futuras implementaciones de frontend y aplicación de escritorio.
+Este repositorio contiene el código del backend en Node.js y la aplicación de escritorio construida con Electron y React.
 
 - `backend/` - API REST en Node.js + Express
-- `frontend/` - (próxima fase)
-- `electron/` - Aplicación de escritorio (placeholder)
+- `frontend/` - Frontend de escritorio con Electron + React
 - `docker/` - Archivos para despliegue con Docker
