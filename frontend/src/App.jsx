@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Chat from './pages/Chat';
+import EstudianteInicio from './pages/EstudianteInicio';
+import EstudianteChat from './pages/EstudianteChat';
 import PanelCurador from './pages/PanelCurador';
 import PanelAdmin from './pages/PanelAdmin';
 import PanelDocente from './pages/PanelDocente';
@@ -24,6 +26,8 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chat/:characterId" element={<Chat />} />
+          <Route path="/estudiante" element={<EstudianteInicio />} />
+          <Route path="/estudiante/chat/:personajeId" element={<EstudianteChat />} />
           <Route path="/curador" element={<PanelCurador />} />
           <Route path="/admin" element={<PanelAdmin />} />
           <Route path="/docente" element={<PanelDocente />} />
