@@ -12,7 +12,11 @@ export default function SidebarDocente() {
         <NavLink to="/docente/desafios" className="sidebar-link"><StarIcon className="inline mr-2" /> Desafíos</NavLink>
         <NavLink to="/docente/reflexiones" className="sidebar-link"><MessageCircleIcon className="inline mr-2" /> Reflexiones</NavLink>
         <NavLink to="/docente/personajes" className="sidebar-link"><BookIcon className="inline mr-2" /> Personajes</NavLink>
+h0f1kp-codex/integrar-backend-con-frontend-para-panel-docente
+        <NavLink to="/docente/mensajes-estudiantes" className="sidebar-link"><UsersIcon className="inline mr-2" /> Mensajes</NavLink>
+
         <NavLink to="/docente/reportes" className="sidebar-link"><UsersIcon className="inline mr-2" /> Reportes/Mensajes</NavLink>
+main
       </nav>
       <style>{`
         .sidebar-link {

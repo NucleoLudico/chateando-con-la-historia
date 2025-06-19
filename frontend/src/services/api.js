@@ -155,3 +155,35 @@ export async function getComparativa() {
     }
   ];
 }
+h0f1kp-codex/integrar-backend-con-frontend-para-panel-docente
+
+export async function getResumenEstudianteDocente(estudianteId) {
+  const res = await fetch(
+    `${API_URL}/docente/estudiante/${estudianteId}/resumen`,
+    { headers: authHeaders() }
+  );
+  if (!res.ok) throw new Error("Error al obtener resumen de estudiante");
+  return await res.json();
+}
+
+export async function getMensajesEstudiantes() {
+  const res = await fetch(`${API_URL}/docente/mensajes-estudiantes`, {
+    headers: authHeaders(),
+  });
+  if (!res.ok) throw new Error("Error al obtener mensajes");
+  return await res.json();
+}
+
+export async function responderMensajeEstudiante(mensajeId, texto) {
+  const res = await fetch(
+    `${API_URL}/docente/mensajes-estudiantes/${mensajeId}/responder`,
+    {
+      method: "POST",
+      headers: authHeaders("application/json"),
+      body: JSON.stringify({ texto }),
+    }
+  );
+  if (!res.ok) throw new Error("Error al responder mensaje");
+  return await res.json();
+}
+ main
