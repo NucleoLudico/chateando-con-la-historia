@@ -10,11 +10,11 @@ import PanelDocente from './pages/PanelDocente';
 import DocenteDesafios from './pages/DocenteDesafios';
 import DocenteReflexiones from './pages/DocenteReflexiones';
 import DocenteComparativa from './pages/DocenteComparativa';
-h0f1kp-codex/integrar-backend-con-frontend-para-panel-docente
 import DocenteResumenEstudiante from './pages/DocenteResumenEstudiante';
 import DocenteMensajesEstudiantes from './pages/DocenteMensajesEstudiantes';
-main
+import DocenteBackupRestore from './pages/DocenteBackupRestore';
 import Navbar from './components/Navbar';
+import NotificacionBackupAuto from './components/NotificacionBackupAuto';
 
 export default function App() {
   return (
@@ -34,11 +34,11 @@ export default function App() {
           <Route path="/docente/desafios" element={<DocenteDesafios />} />
           <Route path="/docente/reflexiones" element={<DocenteReflexiones />} />
           <Route path="/docente/comparativa" element={<DocenteComparativa />} />
-h0f1kp-codex/integrar-backend-con-frontend-para-panel-docente
           <Route path="/docente/estudiante/:estudianteId" element={<DocenteResumenEstudiante />} />
           <Route path="/docente/mensajes-estudiantes" element={<DocenteMensajesEstudiantes />} />
-main
+          <Route path="/docente/backup" element={<DocenteBackupRestore />} />
         </Routes>
+        <NotificacionBackupAuto />
       </div>
     </BrowserRouter>
   );

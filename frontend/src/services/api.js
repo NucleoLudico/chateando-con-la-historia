@@ -244,7 +244,6 @@ export async function getComparativa() {
     }
   ];
 }
-h0f1kp-codex/integrar-backend-con-frontend-para-panel-docente
 
 export async function getResumenEstudianteDocente(estudianteId) {
   const res = await fetch(
@@ -252,7 +251,7 @@ export async function getResumenEstudianteDocente(estudianteId) {
     { headers: authHeaders() }
   );
   if (!res.ok) throw new Error("Error al obtener resumen de estudiante");
-  return await res.json();
+    return await res.json();
 }
 
 export async function getMensajesEstudiantes() {
@@ -260,7 +259,7 @@ export async function getMensajesEstudiantes() {
     headers: authHeaders(),
   });
   if (!res.ok) throw new Error("Error al obtener mensajes");
-  return await res.json();
+    return await res.json();
 }
 
 export async function responderMensajeEstudiante(mensajeId, texto) {
@@ -273,6 +272,5 @@ export async function responderMensajeEstudiante(mensajeId, texto) {
     }
   );
   if (!res.ok) throw new Error("Error al responder mensaje");
-  return await res.json();
+    return await res.json();
 }
- main
