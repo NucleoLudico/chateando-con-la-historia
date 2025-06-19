@@ -4,6 +4,10 @@ import Dashboard from './pages/Dashboard';
 import Chat from './pages/Chat';
 import PanelCurador from './pages/PanelCurador';
 import PanelAdmin from './pages/PanelAdmin';
+import PanelDocente from './pages/PanelDocente';
+import DocenteDesafios from './pages/DocenteDesafios';
+import DocenteReflexiones from './pages/DocenteReflexiones';
+import DocenteComparativa from './pages/DocenteComparativa';
 import Navbar from './components/Navbar';
 
 export default function App() {
@@ -18,6 +22,10 @@ export default function App() {
           <Route path="/chat/:characterId" element={<Chat />} />
           <Route path="/curador" element={<PanelCurador />} />
           <Route path="/admin" element={<PanelAdmin />} />
+          <Route path="/docente" element={<PanelDocente />} />
+          <Route path="/docente/desafios" element={<DocenteDesafios />} />
+          <Route path="/docente/reflexiones" element={<DocenteReflexiones />} />
+          <Route path="/docente/comparativa" element={<DocenteComparativa />} />
         </Routes>
       </div>
     </BrowserRouter>
