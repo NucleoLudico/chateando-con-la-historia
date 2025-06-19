@@ -30,4 +30,10 @@ router.put('/:id', authenticateJWT, authorizeRole(['curador', 'admin']), upload.
 ]), characterController.update);
 router.delete('/:id', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.remove);
 
+// Extra functionalities
+router.post('/:id/duplicate', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.duplicate);
+router.get('/:id/history', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.getHistory);
+router.post('/export', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.exportExcel);
+router.post('/:id/test', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.testChat);
+
 module.exports = router;

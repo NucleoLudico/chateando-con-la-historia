@@ -11,6 +11,10 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const { sequelize } = require('./models');
+// Importa modelos para que Sequelize cree las tablas
+require('./models/user.model');
+require('./models/character.model');
+require('./models/characterHistory.model');
 const userRoutes = require('./routes/user.routes');
 const characterRoutes = require('./routes/character.routes');
 const { errorHandler } = require('./middleware/errorHandler');
