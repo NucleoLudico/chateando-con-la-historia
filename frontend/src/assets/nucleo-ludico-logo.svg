@@ -1,0 +1,6 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="24" cy="24" r="22" stroke="#43AA8B" stroke-width="3" fill="#F1FAEE"/>
+  <circle cx="24" cy="24" r="12" fill="#1D3557"/>
+  <circle cx="24" cy="24" r="6" fill="#FFD166"/>
+  <text x="24" y="45" font-family="Nunito, Inter, sans-serif" font-size="10" fill="#1D3557" text-anchor="middle">Núcleo Lúdico</text>
+</svg>
