@@ -17,12 +17,8 @@
     "jsonwebtoken": "^9.0.0",
     "bcrypt": "^5.1.0",
     "multer": "^1.4.4",
-codex/implementar-duplicado,-historial,-exportar-y-prueba-ia-en-ba
     "exceljs": "^4.3.0",
     "node-fetch": "^2.7.0"
-
-    "exceljs": "^4.3.0"
-main
   },
   "devDependencies": {
     "jest": "^29.6.0",

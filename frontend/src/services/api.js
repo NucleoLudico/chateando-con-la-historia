@@ -87,6 +87,95 @@ export async function testCharacterChat(id, message) {
   return data.reply;
 }
 
+// --- Servicios para módulo estudiante ---
+export async function getPersonajesHabilitados() {
+  const res = await fetch('http://localhost:3001/api/estudiante/personajes', {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener personajes habilitados');
+  return res.json();
+}
+
+export async function getPersonajeDetalle(id) {
+  const res = await fetch(`http://localhost:3001/api/estudiante/personajes/${id}`, {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener detalle de personaje');
+  return res.json();
+}
+
+export async function enviarMensajeIA(personajeId, mensaje) {
+  const res = await fetch(`http://localhost:3001/api/estudiante/chat/${personajeId}`, {
+    method: 'POST',
+    headers: authHeaders('application/json'),
+    body: JSON.stringify({ mensaje })
+  });
+  if (!res.ok) throw new Error('Error al enviar mensaje');
+  return res.json();
+}
+
+export async function getDesafiosActivos() {
+  const res = await fetch('http://localhost:3001/api/estudiante/desafios', {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener desafíos');
+  return res.json();
+}
+
+export async function enviarReflexion(desafioId, texto) {
+  const res = await fetch(`http://localhost:3001/api/estudiante/desafios/${desafioId}/reflexion`, {
+    method: 'POST',
+    headers: authHeaders('application/json'),
+    body: JSON.stringify({ texto })
+  });
+  if (!res.ok) throw new Error('Error al enviar reflexión');
+  return res.json();
+}
+
+export async function getUltimaReflexionFeedback() {
+  const res = await fetch('http://localhost:3001/api/estudiante/ultima-reflexion-feedback', {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener feedback');
+  return res.json();
+}
+
+export async function enviarAutoevaluacion(auto) {
+  const res = await fetch('http://localhost:3001/api/estudiante/autoevaluacion', {
+    method: 'POST',
+    headers: authHeaders('application/json'),
+    body: JSON.stringify(auto)
+  });
+  if (!res.ok) throw new Error('Error al enviar autoevaluación');
+  return res.json();
+}
+
+export async function getPortafolioEstudiante() {
+  const res = await fetch('http://localhost:3001/api/estudiante/portafolio', {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener portafolio');
+  return res.json();
+}
+
+export async function getResumenParaFamilia() {
+  const res = await fetch('http://localhost:3001/api/estudiante/resumen-familia', {
+    headers: authHeaders()
+  });
+  if (!res.ok) throw new Error('Error al obtener resumen');
+  return res.json();
+}
+
+export async function enviarMensajeProfesor(mensaje) {
+  const res = await fetch('http://localhost:3001/api/estudiante/mensaje-profesor', {
+    method: 'POST',
+    headers: authHeaders('application/json'),
+    body: JSON.stringify({ mensaje })
+  });
+  if (!res.ok) throw new Error('Error al enviar mensaje');
+  return res.json();
+}
+
 // --- Servicios simulados para el panel docente ---
 export async function getResumenPanelDocente() {
   return { personajes: 7, reflexiones: 24, logros: 15 };
