@@ -61,3 +61,10 @@ Authorization: Bearer <token>
 
 Sube archivos PDF/imágenes al crear o editar personajes (ver rutas).
 Para producción, cambia el `JWT_SECRET` en `.env`.
+
+## Funciones avanzadas
+- `POST /api/characters/:id/duplicate` duplica un personaje existente.
+- `GET /api/characters/:id/history` obtiene el historial de cambios.
+- `POST /api/characters/export` exporta una lista de personajes a Excel (IDs en el body).
+- `POST /api/characters/:id/test` prueba localmente la conversación con la IA.
+
