@@ -30,6 +30,7 @@ router.put('/:id', authenticateJWT, authorizeRole(['curador', 'admin']), upload.
 ]), characterController.update);
 router.delete('/:id', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.remove);
 
+codex/implementar-duplicado,-historial,-exportar-y-prueba-ia-en-ba
 router.post('/:id/duplicate', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.duplicate);
 router.get('/:id/history', authenticateJWT, authorizeRole(['curador', 'admin']), async (req, res, next) => {
   try {
@@ -42,5 +43,12 @@ router.get('/:id/history', authenticateJWT, authorizeRole(['curador', 'admin']),
 });
 router.post('/export', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.exportExcel);
 router.post('/:id/test', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.testCharacterChat);
+
+// Extra functionalities
+router.post('/:id/duplicate', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.duplicate);
+router.get('/:id/history', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.getHistory);
+router.post('/export', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.exportExcel);
+router.post('/:id/test', authenticateJWT, authorizeRole(['curador', 'admin']), characterController.testChat);
+main
 
 module.exports = router;
