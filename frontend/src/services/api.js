@@ -86,3 +86,72 @@ export async function testCharacterChat(id, message) {
   const data = await res.json();
   return data.reply;
 }
+
+// --- Servicios simulados para el panel docente ---
+export async function getResumenPanelDocente() {
+  return { personajes: 7, reflexiones: 24, logros: 15 };
+}
+
+export async function getGrupos() {
+  return [
+    { id: 1, nombre: "7A" },
+    { id: 2, nombre: "7B" },
+    { id: 3, nombre: "8A" }
+  ];
+}
+
+export async function getUltimosEventos() {
+  return [
+    { estudiante: "Camilo D.", grupo: "7A", accion: "Envío reflexión", fecha: "hace 2 h", feedbackAutomatico: "¡Excelente profundidad!" },
+    { estudiante: "Mónica R.", grupo: "7A", accion: "Completó desafío", fecha: "hace 4 h", feedbackAutomatico: "¡Sigue así, buen trabajo crítico!" },
+    { estudiante: "Sofía M.", grupo: "8A", accion: "Ganó insignia", fecha: "ayer", feedbackAutomatico: null }
+  ];
+}
+
+export async function getDesafios() {
+  return [
+    { titulo: "Debate sobre Mistral", descripcion: "¿Por qué la poesía puede ser resistencia?", grupo: "7A", personajeId: "1" }
+  ];
+}
+
+export async function crearDesafio(d) {
+  return true;
+}
+
+export async function getReflexiones() {
+  return [
+    {
+      id: 1,
+      estudiante: "Camilo D.",
+      texto: "Creo que la memoria histórica es clave para la democracia.",
+      fecha: "hoy",
+      desafioTitulo: "Debate sobre Mistral",
+      feedbackAutomatico: "¡Gran reflexión crítica, Camilo!"
+    }
+  ];
+}
+
+export async function enviarFeedback(reflexionId, texto) {
+  return true;
+}
+
+export async function getComparativa() {
+  return [
+    {
+      nombre: "7A",
+      participacion: 15,
+      estudiantes: [
+        { nombre: "Camilo D.", grupo: "7A", participacion: 7, logros: 2 },
+        { nombre: "Mónica R.", grupo: "7A", participacion: 8, logros: 3 }
+      ]
+    },
+    {
+      nombre: "8A",
+      participacion: 10,
+      estudiantes: [
+        { nombre: "Sofía M.", grupo: "8A", participacion: 5, logros: 1 },
+        { nombre: "Matías S.", grupo: "8A", participacion: 5, logros: 1 }
+      ]
+    }
+  ];
+}
